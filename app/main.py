@@ -24,7 +24,9 @@ app.include_router(user.router)
 app.include_router(auth.router)
 app.include_router(vote.router)
 
-
+@app.get("/")
+def root():
+    return {"message": "Hi this is an API, to reach the documentation: http://localhost:8000/docs"}
 
 
 
